@@ -14,9 +14,7 @@ class SearchBar extends PureComponent {
     this.setState({selectedValue : selectedValue.value ||''});
     this.props.onSubmit(this.state.selectedValue)
     }
-
-  
-
+ 
   //load options ( populates drop down as user types with matching results)
   loadOptions = async (inputText,callback)=>{
   try {
@@ -34,8 +32,8 @@ class SearchBar extends PureComponent {
 
   render(){
     return(
-      <AsyncSelect
-      //isMulti => multi selection is not required
+      <AsyncSelect 
+     // isMulti => multi selection is not required
       Value= {this.state.selectedValue}
       onChange = {this.onChange}
       placeholder = {this.props.placeholderMessage}

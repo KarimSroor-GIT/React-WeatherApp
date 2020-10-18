@@ -13,7 +13,7 @@ class Location extends React.Component  {
     
     if ( woeid !== '')
           { 
-            console.log('iniside onsearchsubmit')
+            //console.log('iniside onsearchsubmit')
             this.setState({woeid:woeid}) 
             this.props.getLocation(this.state.woeid);
           }
@@ -65,7 +65,7 @@ class Location extends React.Component  {
      //use coords to get current location
 
     } else {
-      console.log('unable to detect current location gelocation is not supported on this or is being disabled ')
+      console.log('unable to detect current location gelocation is not supported on this browser or is  disabled ')
     }
   }
   render(){

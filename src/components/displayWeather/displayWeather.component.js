@@ -35,11 +35,12 @@ class DisplayWeather extends React.Component {
   }
 
   render(){
+    // take only first 5 items in the array 
     const weather = this.state.consolidated_weather.slice(0,5);
     
     if(weather.length>0){
       const weatherForcasts = weather.map(
-            i=> (<Col> <DisplayWeatherDetails weatherDetail={i} Key={i.id}/></Col>)
+            i=> (<Col> <DisplayWeatherDetails weatherDetail={i} Key={i.applicable_date}/></Col>)
       )
   return (
             <div>

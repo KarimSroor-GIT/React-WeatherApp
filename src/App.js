@@ -19,6 +19,7 @@ LocationFound = (newlocation)=>
   
 componentDidUpdate(){
   //console.log('app component state updated')
+  if (this.state.location !=='' && this.state.location !== null)
   this.weatherComponent.current.getWeatherDataByLoc(this.state.location)
 }
 
@@ -35,11 +36,12 @@ componentDidUpdate(){
             </Container>
               
       )}else {
+        /* To do: replace Loading text with a modal component to prevent user input while app is loading location */
         return (
           <Container fluid='true'>
             <div><Header/></div>
             <div><Location getLocation={this.LocationFound} /> </div>  
-            <div><h1>Loading ....</h1></div>
+            <div><h1>Loading ....</h1></div> 
             </Container>
         )
       }
